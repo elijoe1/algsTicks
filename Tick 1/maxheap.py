@@ -46,6 +46,8 @@ def push(x, e):
 
 
 def popmax(x):
+    if len(x) == 0:
+        raise IndexError
     to_return = x[0]
     x[0] = x[-1]
     x.pop()
@@ -55,6 +57,8 @@ def popmax(x):
             if x[2 * i + 1] > x[i]:
                 x[i], x[2 * i + 1] = x[2 * i + 1], x[i]
                 i = 2 * i + 1
+            else:
+                break
         else:
             if x[2 * i + 1] > x[i] or x[2 * i + 2] > x[i]:
                 if x[2 * i + 1] > x[2 * i + 2]:
