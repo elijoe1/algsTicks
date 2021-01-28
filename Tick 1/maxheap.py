@@ -67,4 +67,6 @@ def popmax(x):
                 else:
                     x[i], x[2 * i + 2] = x[2 * i + 2], x[i]
                     i = 2 * i + 2
+            else:
+                break
     return to_return
